@@ -9,5 +9,4 @@ public class CoffeBuilderApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CoffeBuilderApplication.class, args);
 	}
-
 }
