@@ -1,15 +1,17 @@
 package com.coffebuilder.CoffeBuilder.controllers;
 import com.coffebuilder.CoffeBuilder.services.FileService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
 import java.io.IOException;
 
 @RestController
-public class CoffeMaker {
+public class CoffeePot {
     @GetMapping("/coffees")
     public ResponseEntity<String> getFileData() {
         File defaultPath = new File("");
