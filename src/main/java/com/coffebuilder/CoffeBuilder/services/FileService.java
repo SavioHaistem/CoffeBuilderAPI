@@ -40,4 +40,8 @@ public class FileService {
             throw new IOException(err);
         }
     }
+
+    public String getFileStringCotent() throws IOException {
+        return this.readFile().toString();
+    }
 }

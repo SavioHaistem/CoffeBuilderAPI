@@ -9,15 +9,14 @@ import java.io.File;
 import java.io.IOException;
 
 @RestController
-public class TestFile {
+public class CoffeMaker {
     @GetMapping("/coffe")
     public ResponseEntity<String> getFileData() {
         File defaultPath = new File("");
         String archivePath = "src/main/resources/data/CoffeSave.csv";
         FileService fileService = new FileService(defaultPath.getPath() + archivePath);
         try {
-            String response = fileService.readFile().getFirst();
-            return new ResponseEntity<>(fileService.readFile().getFirst() + " " + defaultPath.getAbsoluteFile(), HttpStatus.OK);
+            return new ResponseEntity<>(fileService.getFileStringCotent(), HttpStatus.OK);
         } catch (IOException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
