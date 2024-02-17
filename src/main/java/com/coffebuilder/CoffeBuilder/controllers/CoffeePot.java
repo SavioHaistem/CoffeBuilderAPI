@@ -10,10 +10,10 @@ import java.io.IOException;
 
 @RestController
 public class CoffeMaker {
-    @GetMapping("/coffe")
+    @GetMapping("/coffees")
     public ResponseEntity<String> getFileData() {
         File defaultPath = new File("");
-        String archivePath = "src/main/resources/data/CoffeSave.csv";
+        String archivePath = "src/main/resources/data/CoffeeSave.csv";
         FileService fileService = new FileService(defaultPath.getPath() + archivePath);
         try {
             return new ResponseEntity<>(fileService.getFileStringCotent(), HttpStatus.OK);
