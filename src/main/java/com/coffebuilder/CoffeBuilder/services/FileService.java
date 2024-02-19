@@ -1,4 +1,7 @@
 package com.coffebuilder.CoffeBuilder.services;
+import com.coffebuilder.CoffeBuilder.entities.Coffee;
+import com.coffebuilder.CoffeBuilder.enums.Ingredients;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,5 +46,9 @@ public class FileService {
 
     public String getFileStringCotent() throws IOException {
         return this.readFile().toString();
+    }
+
+    public Coffee getCoffeeContent() {
+        return new Coffee("Lunar",new ArrayList<>(),1.0);
     }
 }
