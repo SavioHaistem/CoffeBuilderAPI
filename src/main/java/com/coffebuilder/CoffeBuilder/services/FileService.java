@@ -26,7 +26,6 @@ public class FileService {
     }
 
     public Coffee getCoffeeContent() {
-        //TODO: implements create coffee method
         return new Coffee("Lunar",new ArrayList<>(),1.0);
     }
 
@@ -42,7 +41,6 @@ public class FileService {
                 coffeeList.add(coffee);
                 lineContent =  reader.readLine();
             }
-            System.out.println(coffeeList);
             return coffeeList;
         } catch (IOException err) {
             throw new IOException(err);

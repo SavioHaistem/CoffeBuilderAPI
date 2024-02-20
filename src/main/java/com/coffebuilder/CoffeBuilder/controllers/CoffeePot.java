@@ -1,6 +1,5 @@
 package com.coffebuilder.CoffeBuilder.controllers;
 import com.coffebuilder.CoffeBuilder.entities.Coffee;
-import com.coffebuilder.CoffeBuilder.enums.Ingredients;
 import com.coffebuilder.CoffeBuilder.services.FileService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
