@@ -12,15 +12,15 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping("/coffees")
 public class CoffeePot {
+    FileService fileService = new FileService();
 
     @RequestMapping("/")
-    public ResponseEntity<Coffee> getCoffeesContent() throws IOException {
-        FileService fileService = new FileService();
+    public ResponseEntity<?> getCoffeesContent() throws IOException {
         try {
             return new ResponseEntity<>(fileService.readFile().getFirst(), HttpStatus.OK);
         } catch (IOException e) {
             System.err.println(e.getMessage());
-            return new ResponseEntity<>(new Coffee("Error",new ArrayList<>(),1.0),HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
 }
