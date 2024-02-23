@@ -1,5 +1,4 @@
 package com.coffebuilder.CoffeBuilder.controllers;
-import com.coffebuilder.CoffeBuilder.entities.Coffee;
 import com.coffebuilder.CoffeBuilder.services.FileService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/coffees")

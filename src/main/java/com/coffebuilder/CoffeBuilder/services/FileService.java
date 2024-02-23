@@ -37,11 +37,8 @@ public class FileService {
         try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
             String lineContent = reader.readLine();
             while(lineContent != null) {
-                List<Ingredients> ingredients = new ArrayList<>();
                 String[] splitedLine = lineContent.split(",");
-                Arrays.stream(splitedLine[1].split(" ")).toList().forEach((ingredient) -> ingredients.add(Ingredients.valueOf(ingredient)));
-                Coffee coffee = new Coffee(splitedLine[0],ingredients,Double.parseDouble(splitedLine[2]));
-                coffeeList.add(coffee);
+                coffeeList.add(ConvertCoffeeService.createCoffee(splitedLine));
                 lineContent =  reader.readLine();
             }
             coffeeList.forEach(System.out::println);
