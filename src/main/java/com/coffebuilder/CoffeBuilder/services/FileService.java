@@ -41,6 +41,7 @@ public class FileService {
                 coffeeList.add(coffee);
                 lineContent =  reader.readLine();
             }
+            coffeeList.forEach(System.out::println);
             return coffeeList;
         } catch (IOException err) {
             throw new IOException(err);

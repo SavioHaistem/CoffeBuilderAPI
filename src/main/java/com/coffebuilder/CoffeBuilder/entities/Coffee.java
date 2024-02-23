@@ -39,4 +39,9 @@ public class Coffee {
     public void setQuantity(Double quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "name: " + name + ", ingredients: " + ingredients + ", quantity: " + quantity;
+    }
 }
