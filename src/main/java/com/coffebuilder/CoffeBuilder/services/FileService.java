@@ -1,11 +1,9 @@
 package com.coffebuilder.CoffeBuilder.services;
 import com.coffebuilder.CoffeBuilder.entities.Coffee;
-import com.coffebuilder.CoffeBuilder.enums.Ingredients;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
