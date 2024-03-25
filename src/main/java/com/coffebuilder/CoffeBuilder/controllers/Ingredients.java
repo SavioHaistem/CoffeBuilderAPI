@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class Ingredients {
     @GetMapping
     public ResponseEntity<String> getIngredients() {
-        return new ResponseEntity<>("OK", HttpStatus.OK);
+        return new ResponseEntity<>("OK OU MAIS OU MENOS", HttpStatus.OK);
     }
 }
